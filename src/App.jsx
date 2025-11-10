@@ -6,7 +6,7 @@ import { IndividualBlogPost } from './components/blog/IndividualBlogPost'
 import { Route, Routes } from 'react-router'
 import { ContactPage } from './components/contact/ContactPage'
 import { PostList } from './components/postList/PostList'
-import { Homepage } from './components/Homepage/HomePage'
+import { Homepage } from './components/Homepage/Homepage'
 
 function App() {
   const [count, setCount] = useState(0)
