@@ -30,6 +30,7 @@ export function Login() {
                     />
                     <input 
                         placeholder="Password"
+                        type = "password"
                         className="formcontent"
                         value={userData.password}
                         onChange={(e) => setUserData({...userData, password: e.target.value})}

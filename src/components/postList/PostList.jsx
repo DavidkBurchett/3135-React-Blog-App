@@ -8,10 +8,12 @@ export function PostList() {
     return (
         <>
             <Header />
-            <div class="postlist">
-                <Link to="/posts/1">Post 1</Link>
-                <Link to="/posts/2">Post 2</Link>
-                <Link to="/posts/3">Post 3</Link>
+            <div class = "info3"> 
+                <div class="postlist">
+                    <h3> <Link to="/posts/1">Post 1</Link> </h3>
+                    <h3> <Link to="/posts/2">Post 2</Link> </h3>
+                    <h3> <Link to="/posts/3">Post 3</Link> </h3>
+                </div>
             </div>
             <Footer />
         </>

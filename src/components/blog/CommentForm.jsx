@@ -38,13 +38,6 @@ export function CommentForm () {
     fetchData();
   }, []);
 
-
-    /*
-    const addComment = (comment) => {
-    setCommentList([...commentList, comment]);
-    }
-    */
-
     const [show, toggleShow] = useToggle()
     const textboxref = useRef();
 
