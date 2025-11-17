@@ -7,18 +7,23 @@ import { Route, Routes } from 'react-router'
 import { ContactPage } from './components/contact/ContactPage'
 import { PostList } from './components/postList/PostList'
 import { Homepage } from './components/Homepage/Homepage'
+import { Login } from "./components/login/Login"
+import { AuthProvider } from './components/authWrapper/AuthProvider'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path='/posts' element={<PostList />}/>
-      <Route path='/posts/:post_id' element={<IndividualBlogPost />}/>
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path='/posts' element={<PostList />}/>
+        <Route path='/posts/:post_id' element={<IndividualBlogPost />}/>
+        <Route path ="/login" element={<Login />}/>
+      </Routes>
+    </AuthProvider>
     </>
   )
 }

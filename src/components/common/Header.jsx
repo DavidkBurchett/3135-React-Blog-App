@@ -1,16 +1,22 @@
 import React from "react";
 import './Header.css'
 import { Link } from 'react-router'
+import { useAuth, useUsername } from "../authWrapper/AuthContext";
 
 export function Header () {
+    const username = useUsername();
+    const {logout} = useAuth();
     return (
         <div class = "header">
             <h1> My Blog </h1>
             <nav>
-                <h2> <Link to="/">Home</Link> </h2>
-                <h2> <Link to="/contact">Contact</Link> </h2>
-                <h2> <Link to="/posts">Blog Posts</Link> </h2>
-                {/* <h2> <a href = "#content" > Content </a> </h2> */}
+                <li> <Link to="/">Home</Link> </li>
+                <li> <Link to="/contact">Contact</Link> </li>
+                <li> <Link to="/posts">Blog Posts</Link> </li>
+                <li> 
+                    {/* <Link to="/login">Login</Link>  */}
+                    {username ? <Link to="/" onClick={logout}>Hi {username}, Log out</Link> : <Link to="/login">Login</Link>}
+                </li>
             </nav>
         </div>
 
