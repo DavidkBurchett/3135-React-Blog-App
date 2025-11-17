@@ -15,7 +15,7 @@ export function Header () {
                 <li> <Link to="/posts">Blog Posts</Link> </li>
                 <li> 
                     {/* <Link to="/login">Login</Link>  */}
-                    {username ? <Link to="/" onClick={logout}>Hi {username}, Log out</Link> : <Link to="/login">Login</Link>}
+                    {username ? <Link to="/" onClick={logout}>Log out</Link> : <Link to="/login">Login</Link>}
                 </li>
             </nav>
         </div>

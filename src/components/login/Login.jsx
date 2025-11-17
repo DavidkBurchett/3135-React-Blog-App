@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Header } from "../common/Header";
 import { Footer } from "../common/Footer";
 import { useAuth } from "../authWrapper/AuthContext";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export function Login() {
+    const navigate = useNavigate();
     const {login} = useAuth();
     const [userData, setUserData] = useState({
         username: '',
@@ -14,6 +15,7 @@ export function Login() {
         e.preventDefault();
         // console.log(userData)
         login(userData.username)
+        navigate("/posts");
     }
     return (
         <>
@@ -32,9 +34,9 @@ export function Login() {
                         value={userData.password}
                         onChange={(e) => setUserData({...userData, password: e.target.value})}
                     />
-                    <button type="submit" className="formcontent" id="subbtn">
-                        Submit
-                    </button>
+                        <button type="submit" className="formcontent" id="subbtn">
+                            Submit
+                        </button>
                 </form>
                 
             </div>

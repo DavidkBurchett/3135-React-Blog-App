@@ -4,6 +4,7 @@ import { useToggle } from "../../hooks/useToggles";
 import { IndividualComment } from "./IndividualComment";
 import axios from "axios";
 import { useParams } from "react-router";
+import { useUsername } from "../authWrapper/AuthContext";
 
 
 export function CommentForm () {
@@ -18,6 +19,8 @@ export function CommentForm () {
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(true);
     const [commentData, setCommentData] = useState();
+    const username = useUsername();
+    
 
     useEffect(() => {
     const fetchData = async() => {
@@ -63,15 +66,15 @@ export function CommentForm () {
     return (
         <div id="comment_class">
             <h2> Comments </h2>
-            <input
+            {/* <input
                 value={comment.name}
                 onChange={(e) => setComment({...comment, name: e.target.value})}
                 placeholder="Name"
-            />
+            /> */}
             <textarea
                 ref={textboxref}
                 value={comment.content}
-                onChange={(e) => setComment({...comment, content: e.target.value})}
+                onChange={(e) => setComment({...comment, content: e.target.value, name: username})}
                 placeholder="Add a comment"
             />
             <button class ="commentbtn"
