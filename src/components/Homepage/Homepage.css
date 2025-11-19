@@ -8,6 +8,7 @@
     margin-bottom: 2rem;
     margin-top: 2rem;
     border: 2px solid;
+    box-shadow: 5px 5px 15px rgba(77, 67, 67, 0.3);
     border-color: rgb(130, 17, 0);
     align-items: center;
 }

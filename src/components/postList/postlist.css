@@ -12,5 +12,6 @@
     justify-content: center;
     margin: 2rem auto;    
     border: 2px solid rgb(130, 17, 0);
+    box-shadow: 5px 5px 15px rgba(77, 67, 67, 0.3);
     align-items: center;
 }
