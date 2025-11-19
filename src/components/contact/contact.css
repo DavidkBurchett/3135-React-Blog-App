@@ -23,3 +23,15 @@
     text-align: center;
     background-color: rgb(130, 17, 0);
 }
+
+@media screen and (max-width: 775px) {
+    .formcontainer {
+        max-width: 100%;
+        width: 90%;          
+        padding: 1rem;
+    }
+
+    #subbtn {
+        width: 100%;         
+    }
+}

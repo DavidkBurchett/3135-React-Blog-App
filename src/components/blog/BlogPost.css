@@ -8,14 +8,10 @@ h1 {
 
 .info {
     display: flex;
-    position: relative;
-    left: 34%;
     width: 30%;
     justify-content: space-around;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    border: 2px solid;
-    border-color: rgb(130, 17, 0);
+    margin: 2rem auto;          
+    border: 2px solid rgb(130, 17, 0);
     align-items: center;
 }
 
@@ -29,3 +25,21 @@ p {
 h1{
     padding: 10px;
 }
+
+@media screen and (max-width: 600px) {
+    .info {
+      width: 90%;           
+      margin: 1.5rem auto;  
+      padding: 12px;        
+    }
+  
+    h1 {
+      font-size: 1.4rem;    
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 0.95rem;  
+    }
+  }
+  

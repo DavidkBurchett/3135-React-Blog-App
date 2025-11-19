@@ -7,8 +7,8 @@ export function Header () {
     const username = useUsername();
     const {logout} = useAuth();
     return (
-        <div class = "header">
-            <h1> My Blog </h1>
+        <div className = "header">
+            <h2> My Blog </h2>
             <nav>
                 <li> <Link to="/">Home</Link> </li>
                 <li> <Link to="/contact">Contact</Link> </li>
