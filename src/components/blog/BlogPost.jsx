@@ -40,8 +40,8 @@ export function BlogPost () {
         {loading ? (
           <p>Loading...</p>
         ) : (
-          <div>
-        <h1> {postData.title} </h1>
+          <div class="blogbody">
+        <h2> {postData.title} </h2>
         <p> {postData.body} </p>
         <div class="info">
           <p> {authorData.name} </p>

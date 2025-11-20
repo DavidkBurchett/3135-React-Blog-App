@@ -6,9 +6,16 @@
     width: 30%;
     justify-content:center;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 140px;
     border: 2px solid;
     box-shadow: 5px 5px 15px rgba(77, 67, 67, 0.3);
     border-color: rgb(130, 17, 0);
     align-items: center;
+}
+
+@media screen and (max-width: 800px){
+    .info2{
+        width: 60%;
+        left: 20%;
+    }
 }

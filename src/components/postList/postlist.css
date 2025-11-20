@@ -1,7 +1,6 @@
 .postlist {
     display: flex;
     flex-direction: column;
-    gap: y-2;
 }
 
 .info3 {

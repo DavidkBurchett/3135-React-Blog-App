@@ -5,11 +5,14 @@
 
 .header {
     background-color: rgb(130, 17, 0);
+    flex-direction: column;
+    align-items: center;
     display: flex;
     justify-content: left;
+    height: auto;
     position: absolute;
     margin: 0;
-    gap: 22rem;      
+    gap: 1rem;      
     padding: 10px 10px;  
     top: 0;
     left: 0;
@@ -19,15 +22,15 @@
 
 nav {
     display: flex;
-    gap: 5rem;
-    padding-top: 50px;
+    gap: 1.5rem;
+    padding-top: 0;
 }
 
 a {
     color: white;
 }
 
-@media screen and (max-width: 950px) {
+/* @media screen and (min-width: 950px) {
     .header {
       flex-direction: column;  
       align-items: center;      
@@ -42,4 +45,4 @@ a {
       padding-top: 0; 
     }
   }
-  
+   */
